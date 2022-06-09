@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="/css/bootstrap.min.css">
 
 <script src="https://kit.fontawesome.com/936aa708c6.js" crossorigin="anonymous"></script>
-
+<script src="/public/script.js" defer></script>
+<link rel="stylesheet" href="/public/style.css">
 <nav class="navbar navbar-light bg-success">
     <div class="container-fluid">
         <a class="navbar-brand text-white" href="#">
@@ -11,26 +12,19 @@
     </div>
 </nav>
 <body>
+    
    <div class='d-flex justify-content-center'>
         {{> Dashboard }}
     </div>
     <div class='d-flex justify-content-center'>
         {{> Producto}}
     </div>
-</body>
+    <div class='d-flex justify-content-center'>
+        {{> Compra}}
+    </div>
+    <div class='d-flex justify-content-center'>
+        {{> Boton}}
+    </div>
   
-        <style>
-            * {
-                margin: 0;
-            }
-
-            .contain {
-                background: #;
-                height: 100vh;
-            }
-            body{
-                background: rgb(238,228,174);
-                background: radial-gradient(circle, rgba(238,228,174,1) 0%, rgba(233,148,148,0.5186449579831933) 100%);
-            }
-        </style>
+</body>
 <script src="/js/bootstrap.min.js"></script>
