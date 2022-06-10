@@ -1,37 +1,33 @@
-// Paso 1
 const express = require('express')
 const app = express()
-const {engine} = require('express-handlebars')
-app.listen(3000, () => {
-  console.log('El servidor está inicializado en el puerto 3000')
-})
+const { engine } = require('express-handlebars')
+
 app.engine(
-  'handlebars',
-  engine({
-    layoutsDir: __dirname + '/views',
-    partialsDir: __dirname + '/views/componentes/',
-  })
+	'handlebars',
+	engine({
+		layoutsDir: __dirname + '/views',
+		partialsDir: __dirname + '/views/componentes/',
+	})
 )
+
 app.set('view engine', 'handlebars')
-// Paso 2
+
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'))
+
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js'))
 app.use('/public', express.static(__dirname + '/public'))
 
+app.use('/public', express.static(__dirname + '/public'))
+
 app.use('/img', express.static(__dirname + '/img'))
-// Paso 3
-app.get('/', function (req, res) {
-  // Paso 5
-  res.render('Inicio', {
-    layout: 'Inicio',
-    productos: [
-      'banana',
-      'cebollas',
-      'lechuga',
-      'papas',
-      'pimenton',
-      'tomate',
-    ],
-    
-  })
+
+app.get('/',  (req, res) => {
+	res.render('Inicio', {
+		layout: 'Inicio',
+		productos: ['banana', 'cebollas', 'lechuga', 'papas', 'pimenton', 'tomate'],
+	})
+})
+
+app.listen(3000, () => {
+	console.log('server running at http://localhost:3000')
 })
