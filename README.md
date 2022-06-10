@@ -8,5 +8,5 @@ El desafío está basado en los siguientes capítulos de la lectura:
 - Devolviendo un sitio web de contenido dinámico
 
 ## Integrantes
-- Adrianalol
-- Diegolol
+- Adriana Oviedo
+- Diego Campuzano
